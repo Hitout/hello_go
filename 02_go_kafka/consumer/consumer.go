@@ -14,6 +14,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	// 关闭
+	defer kafka.ConsumerClose()
 
 	// 监听
 	go func() {
